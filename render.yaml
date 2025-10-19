@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: tradingview-scanner
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20.10.0
+      - key: TELEGRAM_BOT_TOKEN
+        value: 8195507774:AAGceiXafAcNrzjs9o8j8wr9B-amR4cJX-g
+      - key: TELEGRAM_CHAT_ID
+        value: 1735382824
+      - key: TRADINGVIEW_URL
+        value: https://www.tradingview.com/cex-screener/
